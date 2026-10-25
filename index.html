@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b3b78">
+  <meta name="description" content="DISHWIN AGENCY — local digital services and DTDC courier support in Arakandanallur, Villupuram, Tamil Nadu.">
+  <title>DISHWIN AGENCY | Digital Services & Courier</title>
+  <style>
+    :root{--navy:#0b3b78;--blue:#1769c2;--sky:#eaf4ff;--ink:#172b45;--muted:#5c6d82;--white:#fff;--line:#dbe7f4;--green:#16864b}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#f7faff;line-height:1.6}
+    a{color:inherit}
+    .wrap{width:min(1100px,92%);margin:auto}
+    header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+    .logo{width:48px;height:48px;flex:0 0 48px;border-radius:14px;background:linear-gradient(145deg,var(--blue),var(--navy));display:grid;place-items:center;color:white;font-weight:900;font-size:19px;box-shadow:0 5px 14px #0b3b7829}
+    .brand-name{font-size:17px;font-weight:900;color:var(--navy);letter-spacing:.5px;line-height:1.15}
+    .brand-sub{font-size:11px;color:var(--muted);letter-spacing:.8px}
+    nav{display:flex;gap:20px;align-items:center}
+    nav a{text-decoration:none;font-weight:700;font-size:13px;color:var(--ink)}
+    nav a:hover{color:var(--blue)}
+    .btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;border:0;border-radius:12px;padding:12px 17px;background:var(--blue);color:#fff;text-decoration:none;font-weight:800;cursor:pointer;box-shadow:0 6px 15px #1769c226}
+    .btn:hover{background:var(--navy)}
+    .btn-light{background:#fff;color:var(--navy);border:1px solid var(--line);box-shadow:none}
+    .hero{background:linear-gradient(135deg,#eaf4ff 0%,#fff 55%,#dcecff 100%);padding:65px 0 58px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:38px;align-items:center}
+    .eyebrow{display:inline-block;background:#d8eaff;color:var(--navy);font-size:12px;font-weight:900;letter-spacing:1.2px;padding:7px 11px;border-radius:999px}
+    h1{font-size:clamp(34px,5vw,58px);line-height:1.08;letter-spacing:-1.4px;color:var(--navy);margin:18px 0}
+    h1 span{color:var(--blue)}
+    .lead{font-size:17px;color:var(--muted);max-width:590px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+    .hero-card{background:white;border:1px solid var(--line);border-radius:24px;padding:25px;box-shadow:0 20px 50px #0b3b7812}
+    .hero-icon{width:70px;height:70px;border-radius:20px;background:var(--sky);display:grid;place-items:center;font-size:34px;margin-bottom:16px}
+    .hero-card h2{margin:0 0 8px;color:var(--navy);font-size:23px}
+    .hero-card p{color:var(--muted);margin:0}
+    .mini-row{display:flex;gap:10px;align-items:center;padding-top:18px;margin-top:18px;border-top:1px solid var(--line);font-size:13px;font-weight:700}
+    section{padding:62px 0}
+    .section-head{text-align:center;max-width:680px;margin:0 auto 32px}
+    .section-head h2{font-size:clamp(27px,4vw,38px);line-height:1.15;color:var(--navy);margin:0 0 10px}
+    .section-head p{color:var(--muted);margin:0}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+    .service{background:#fff;border:1px solid var(--line);border-radius:18px;padding:23px;transition:transform .2s,box-shadow .2s}
+    .service:hover{transform:translateY(-3px);box-shadow:0 14px 28px #0b3b780e}
+    .service-icon{width:52px;height:52px;border-radius:15px;background:var(--sky);display:grid;place-items:center;font-size:25px;margin-bottom:15px}
+    .service h3{color:var(--navy);font-size:18px;margin:0 0 7px}
+    .service p{font-size:14px;color:var(--muted);margin:0}
+    .note{font-size:12px;color:var(--muted);text-align:center;margin-top:18px}
+    .about-band{background:var(--navy);color:#fff}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+    .about-band h2{font-size:clamp(28px,4vw,38px);line-height:1.2;margin:0 0 13px}
+    .about-band p{color:#d6e7ff}
+    .checks{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:10px}
+    .checks li:before{content:"✓";display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#ffffff20;color:#fff;font-weight:900;margin-right:10px}
+    .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:20px}
+    .contact-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:25px}
+    .contact-card h3{color:var(--navy);margin:0 0 17px}
+    .contact-item{display:flex;gap:12px;margin:17px 0;align-items:flex-start}
+    .contact-item .ico{font-size:21px}
+    .contact-item strong{display:block;color:var(--navy)}
+    .contact-item span,.contact-item a{font-size:14px;color:var(--muted);overflow-wrap:anywhere}
+    .map-panel{min-height:250px;border-radius:16px;background:linear-gradient(135deg,#eaf4ff,#f7fbff);border:1px dashed #b9d3ef;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px}
+    .map-panel .pin{font-size:35px}
+    footer{background:#062a56;color:#d9e8fb;padding:25px 0;font-size:13px}
+    .footer-row{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;align-items:center}
+    .whatsapp-float{position:fixed;right:17px;bottom:17px;z-index:20;border-radius:999px;background:var(--green);color:#fff;text-decoration:none;padding:13px 17px;font-weight:900;box-shadow:0 8px 25px #0002;display:flex;gap:8px;align-items:center}
+    @media(max-width:760px){
+      .nav{flex-wrap:wrap}.nav .top-cta{display:none}nav{width:100%;justify-content:space-between;gap:10px;padding:5px 0 2px}nav a{font-size:12px}
+      .hero{padding:43px 0}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.hero-card{max-width:500px}
+      section{padding:46px 0}.services{grid-template-columns:1fr 1fr;gap:12px}.service{padding:17px}.service h3{font-size:16px}
+      .lead{font-size:16px}.hero-actions .btn{flex:1}
+    }
+    @media(max-width:420px){.services{grid-template-columns:1fr}.brand-name{font-size:15px}.logo{width:43px;height:43px;flex-basis:43px}nav a{font-size:11px}.whatsapp-float{right:12px;bottom:12px;padding:12px 14px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#home" aria-label="DISHWIN AGENCY home">
+        <!-- Replace this text logo with your official logo image if available -->
+        <div class="logo" aria-hidden="true">DW</div>
+        <div><div class="brand-name">DISHWIN AGENCY</div><div class="brand-sub">DIGITAL SERVICES • COURIER</div></div>
+      </a>
+      <a class="btn top-cta" href="https://wa.me/919092156531" target="_blank" rel="noopener">☏ WhatsApp Us</a>
+      <nav aria-label="Main navigation">
+        <a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">YOUR LOCAL SERVICE CENTER</span>
+          <h1>Welcome to<br><span>DISHWIN AGENCY</span></h1>
+          <p class="lead">Convenient digital service assistance and courier support for customers in Arakandanallur and nearby areas.</p>
+          <div class="hero-actions">
+            <a class="btn" href="https://wa.me/919092156531?text=Vanakkam%20DISHWIN%20AGENCY%2C%20service%20details%20therinjukanum." target="_blank" rel="noopener">☘ Chat on WhatsApp</a>
+            <a class="btn btn-light" href="#services">Explore Services ↓</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-icon">🏪</div>
+          <h2>Local. Helpful. Convenient.</h2>
+          <p>Your nearby point for available digital services and courier-related assistance.</p>
+          <div class="mini-row"><span>📍</span><span>Arakandanallur, Villupuram, Tamil Nadu</span></div>
+          <div class="mini-row"><span>📞</span><span>9092156531</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Our Services</h2>
+          <p>Explore the services available at DISHWIN AGENCY. Please contact us to confirm availability and requirements.</p>
+        </div>
+        <div class="services">
+          <article class="service"><div class="service-icon">🚚</div><h3>DTDC Courier</h3><p>Courier booking assistance and shipment-related customer support, subject to current service availability.</p></article>
+          <article class="service"><div class="service-icon">🏦</div><h3>AEPS Services</h3><p>AEPS-related banking assistance through authorized service channels, where available.</p></article>
+          <article class="service"><div class="service-icon">🪪</div><h3>PAN Services</h3><p>PAN application assistance and related guidance, subject to provider rules.</p></article>
+          <article class="service"><div class="service-icon">📱</div><h3>Mobile Recharge</h3><p>Recharge assistance for supported operators and plans.</p></article>
+          <article class="service"><div class="service-icon">💸</div><h3>Money Transfer</h3><p>Money transfer assistance through applicable authorized services and verification.</p></article>
+          <article class="service"><div class="service-icon">🖨️</div><h3>Digital & Print Support</h3><p>Ask us about available printing, document and other digital support services.</p></article>
+        </div>
+        <p class="note">Services may require identity verification, supporting documents, fees or eligibility checks. Availability can change.</p>
+      </div>
+    </section>
+
+    <section class="about-band" id="about">
+      <div class="wrap about-grid">
+        <div>
+          <h2>Here to help our local community</h2>
+          <p>DISHWIN AGENCY serves customers in and around Arakandanallur with a focus on clear guidance, convenient service and friendly support.</p>
+          <ul class="checks"><li>Convenient local contact</li><li>Helpful service guidance</li><li>Direct WhatsApp communication</li></ul>
+        </div>
+        <div class="hero-card">
+          <div class="hero-icon">🤝</div>
+          <h2>Need service details?</h2>
+          <p>Message us on WhatsApp before visiting. We can help you check the service, documents and timings.</p>
+          <div style="margin-top:20px"><a class="btn" href="https://wa.me/919092156531?text=Vanakkam%2C%20DISHWIN%20AGENCY%20service%20details%20venum." target="_blank" rel="noopener">Message DISHWIN AGENCY</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="section-head"><h2>Contact Us</h2><p>Reach DISHWIN AGENCY for service details and local assistance.</p></div>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Contact Details</h3>
+            <div class="contact-item"><div class="ico">📍</div><div><strong>Business Address</strong><span>No. 310, Mariyamman Kovil Street, Near Police Station, Arakandanallur, Villupuram - 605752, Tamil Nadu</span></div></div>
+            <div class="contact-item"><div class="ico">📞</div><div><strong>Phone / WhatsApp</strong><a href="https://wa.me/919092156531" target="_blank" rel="noopener">9092156531 — Chat on WhatsApp</a></div></div>
+            <div class="contact-item"><div class="ico">🕒</div><div><strong>Business Hours</strong><span>Please contact us to confirm today's timings.</span></div></div>
+            <a class="btn" style="width:100%;margin-top:12px" href="https://wa.me/919092156531?text=Vanakkam%20DISHWIN%20AGENCY" target="_blank" rel="noopener">☘ Contact on WhatsApp</a>
+          </div>
+          <div class="contact-card">
+            <h3>Find Our Location</h3>
+            <div class="map-panel"><div class="pin">📍</div><strong>DISHWIN AGENCY</strong><p>Arakandanallur, Villupuram, Tamil Nadu</p><a class="btn btn-light" href="https://www.google.com/maps/search/?api=1&query=No%20310%20Mariyamman%20Kovil%20Street%20Arakandanallur%20Villupuram%20605752" target="_blank" rel="noopener">Open in Google Maps ↗</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row"><div><strong>DISHWIN AGENCY</strong> · Digital Services & Courier Support</div><div>© <span id="year">2026</span> DISHWIN AGENCY. All rights reserved.</div></div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/919092156531?text=Vanakkam%20DISHWIN%20AGENCY" target="_blank" rel="noopener" aria-label="Chat with DISHWIN AGENCY on WhatsApp">☘ WhatsApp</a>
+</body>
+</html>
